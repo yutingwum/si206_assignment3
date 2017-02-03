@@ -20,7 +20,13 @@ import re
 
 ## Write code to define your parse_counted_words function here.
 
-
+def parse_counted_words(str):
+    phrase = r"(\d+)\s(\S[A-Za-z]+\b)"
+    matches = re.findall(phrase, str)
+    if len(matches) >= 1:
+        return matches[-1]
+    else:
+        return None
 
 
 
